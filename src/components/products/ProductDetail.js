@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import Api from "../../auth";
+import ProductSlider from './ProductSlider';
+import ProductPrice from './ProductPrice';
+import SellerDescription from './SellerDescription';
+import ProductDescription from './ProductDescription';
 
 class ProductDetail extends Component{
     constructor(){
@@ -26,18 +30,20 @@ componentDidMount(){
         }
         return(
             <div className="container">
-                <ul>
+               <div className="main">
+                <div className="left_col">
                     {
-                        pd.images && pd.images.map( x => {
-                        return <li key={x.id}><img src={x.src} /></li>
-                        })
+                        pd.images && <ProductSlider imgSrc={pd.images} />
+                    }  
+                    {
+                        pd.description && <ProductDescription des={pd.description} />
                     }
-                </ul>
-                {
-                pd.description ? 
-                <div dangerouslySetInnerHTML={{__html: pd.description}}></div>:
-                null
-                }
+                </div>
+                <div className="rigth_col">
+                    <ProductPrice price={pd.price} name={pd.name} date={pd.date_created} loc={pd.categories} />
+                    <SellerDescription adId={this.props.match.params.id} />
+                </div>
+                </div>
             </div>
         )
     }
