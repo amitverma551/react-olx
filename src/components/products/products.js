@@ -29,7 +29,7 @@ componentDidMount(){
                  <ul className="rl3f9 AueO0" data-aut-id="itemsList">
                      {
                          products.length ?
-                         products.map( product => <SingleProduct key={product.id} slug={'item/' + product.id} title={product.name} image={product.images[0].src} price={product.price} date={product.date_created} location={product.categories} featured={product.featured} />
+                         products.map( product => <SingleProduct key={product.id} slug={'item/' + product.slug + '-iid-' + product.id} title={product.name} image={product.images[0].src} price={product.price} date={product.date_created} location={product.categories} featured={product.featured} />
                          ) :
                          null
                      }

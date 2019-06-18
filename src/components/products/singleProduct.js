@@ -26,7 +26,7 @@ class SingleProduct extends Component{
                     <div className="_1KOFM">
                         {
                             loc.length ?
-                            loc.map( l => <span key={l.id} className="tjgMj" data-aut-id="item-location">{l.name}</span>):
+                            loc.reverse().map( l => <span key={l.id} className="tjgMj" data-aut-id="item-location">{l.name}</span>):
                             null
                         }
                         <span className="zLvFQ"><span>{this.props.date}</span></span></div>

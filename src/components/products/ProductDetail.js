@@ -11,7 +11,8 @@ class ProductDetail extends Component{
 
 componentDidMount(){
     const {params} = this.props.match;
-    Api.get('products/'+ params.id, (error, data, response) => {
+    const param_id = params.id.split('-iid-')[1];
+    Api.get('products/'+ param_id, (error, data, response) => {
         this.setState({
             pd: JSON.parse(response)
         })
@@ -23,7 +24,6 @@ componentDidMount(){
         if(pd === undefined) {
             console.log("Loading...")   
         }
-        console.log(pd)
         return(
             <div className="container">
                 <ul>
