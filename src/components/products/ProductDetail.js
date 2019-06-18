@@ -32,12 +32,8 @@ componentDidMount(){
             <div className="container">
                <div className="main">
                 <div className="left_col">
-                    {
-                        pd.images && <ProductSlider imgSrc={pd.images} />
-                    }  
-                    {
-                        pd.description && <ProductDescription des={pd.description} />
-                    }
+                    <ProductSlider imgSrc={pd.images} />  
+                    <ProductDescription des={pd.description} />
                 </div>
                 <div className="rigth_col">
                     <ProductPrice price={pd.price} name={pd.name} date={pd.date_created} loc={pd.categories} />
