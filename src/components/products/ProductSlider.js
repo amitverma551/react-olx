@@ -20,12 +20,14 @@ class ProductSlider extends Component{
 
          const sliderImg = this.props.imgSrc;
         return(
-            <div>
+            <div className="rui-2ns2W">
+                <div className="rui-2vHTl _1rH9T">
                 <Swiper {...params}>
                     {
                          sliderImg && sliderImg.map(img => <div key={img.id}><img src={img.src} /></div>)
                     }   
                 </Swiper>                
+            </div>
             </div>
         )
     }
