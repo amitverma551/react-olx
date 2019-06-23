@@ -6,8 +6,7 @@ const Api = new WooCommerceAPI({
     consumerKey: Constants.consumerKey,
     consumerSecret: Constants.consumerSecret,
     wpAPI: true,
-    version: 'wc/v3',
-    verifySsl: false
+    version: 'wc/v3'
 });
 
 export default Api;

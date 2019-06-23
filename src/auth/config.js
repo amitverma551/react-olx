@@ -1,7 +1,7 @@
 const Constants = {
     endpoint: 'http://localhost/olx-admin',
-    consumerKey : 'ck_835e29aeecb8500eee26dfd862e1028a86114c67',
-    consumerSecret : 'cs_93172b64f7a93dc5800fbbab4379660c328d407b'
+    consumerKey : 'ck_38b5ae73063e10166f7a2ee7597e110f917e23d3',
+    consumerSecret : 'cs_601d050e2991bdad878568acd7c62fdf4412b376'
 }
 
 module.exports = Constants
